@@ -23,3 +23,34 @@ if (hamburger) {
     navLinks.style.gap = '14px';
   });
 }
+
+// Show whole photo on a blurred backdrop (horses + gallery)
+document.querySelectorAll('.fit').forEach(box => {
+  const img = box.querySelector('img');
+  if (!img) return;
+  img.classList.add('fg');
+  const bg = img.cloneNode();
+  bg.className = 'bg';
+  bg.alt = '';
+  bg.setAttribute('aria-hidden', 'true');
+  box.insertBefore(bg, img);
+});
+
+// Category tiles: tap Cattle / Goats / Sheep / Horses to filter the livestock cards
+const tiles = document.querySelectorAll('.cat-tile');
+const cards = Array.from(document.querySelectorAll('.animal-card'));
+const grid = document.querySelector('.animal-grid');
+const tabs = document.getElementById('catTabs');
+
+tiles.forEach(tile => {
+  const filter = tile.dataset.filter;
+  const count = filter === 'all' ? cards.length : cards.filter(c => c.dataset.cat === filter).length;
+  tile.querySelector('small').textContent = count + (count === 1 ? ' type' : ' types');
+
+  tile.addEventListener('click', () => {
+    tiles.forEach(t => t.classList.toggle('active', t === tile));
+    cards.forEach(c => { c.hidden = !(filter === 'all' || c.dataset.cat === filter); });
+    grid.classList.toggle('filtered', filter !== 'all');
+    tabs.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});

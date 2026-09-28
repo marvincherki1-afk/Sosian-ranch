@@ -59,11 +59,19 @@
 <section id="livestock" class="livestock">
   <span class="eyebrow">OUR LIVESTOCK</span>
   <h2>Quality Breeds, Ready for Your Farm</h2>
-  <p class="sub">Every animal is raised on our own pasture. Nationwide delivery available on every order below.</p>
+  <p class="sub">Tap a category to see every animal we have — cattle, goats, sheep or horses. Nationwide delivery available on every order.</p>
+
+  <div class="cat-tabs" id="catTabs">
+    <button class="cat-tile active" data-filter="all"><img src="images/gallery-2.jpg" alt=""><span class="cat-label"><b>All Livestock</b><small></small></span></button>
+    <button class="cat-tile" data-filter="cattle"><img src="images/cattle-dairy2.jpg" alt=""><span class="cat-label"><b>Cattle</b><small></small></span></button>
+    <button class="cat-tile" data-filter="goats"><img src="images/goat-boer.jpg" alt=""><span class="cat-label"><b>Goats</b><small></small></span></button>
+    <button class="cat-tile" data-filter="sheep"><img src="images/sheep-doper.jpg" alt=""><span class="cat-label"><b>Sheep</b><small></small></span></button>
+    <button class="cat-tile" data-filter="horses"><img src="images/horse-main.jpg" alt="" style="object-position:center 30%;"><span class="cat-label"><b>Horses</b><small></small></span></button>
+  </div>
 
   <div class="animal-grid">
 
-    <div class="animal-card">
+    <div class="animal-card" data-cat="cattle">
       <div class="thumb"><img src="images/cattle-sahiwal.jpg" alt="Sahiwal cattle at Sosian Ranch"></div>
       <div class="badge">🚚 Nationwide Delivery Available</div>
       <h3>Sahiwal Cattle</h3>
@@ -83,7 +91,7 @@
       </div>
     </div>
 
-    <div class="animal-card">
+    <div class="animal-card" data-cat="cattle">
       <div class="thumb"><img src="images/cattle-ayrshire.jpg" alt="Ayrshire cow at Sosian Ranch"></div>
       <div class="badge">🚚 Nationwide Delivery Available</div>
       <h3>Ayrshire Cow</h3>
@@ -103,7 +111,7 @@
       </div>
     </div>
 
-    <div class="animal-card">
+    <div class="animal-card" data-cat="cattle">
       <div class="thumb"><img src="images/cattle-dairy.jpg" alt="Girolando heifers at Sosian Ranch"></div>
       <div class="badge">🚚 Nationwide Delivery Available</div>
       <h3>Girolando Breed Heifers</h3>
@@ -123,7 +131,7 @@
       </div>
     </div>
 
-    <div class="animal-card">
+    <div class="animal-card" data-cat="cattle">
       <div class="thumb"><img src="images/cattle-dairy2.jpg" alt="Dairy cows at Sosian Ranch"></div>
       <div class="badge">🚚 Nationwide Delivery Available</div>
       <h3>Dairy Cows</h3>
@@ -143,7 +151,7 @@
       </div>
     </div>
 
-    <div class="animal-card">
+    <div class="animal-card" data-cat="cattle">
       <div class="thumb"><img src="images/cattle-pedigree.jpg" alt="Pedigree dairy cows at Sosian Ranch"></div>
       <div class="badge">🚚 Nationwide Delivery Available</div>
       <h3>🐄 Pedigree Dairy Cows</h3>
@@ -160,8 +168,8 @@
       </div>
     </div>
 
-    <div class="animal-card">
-      <div class="thumb"><img src="images/goat-boer.jpg" alt="Boer goats at Sosian Ranch" style="object-position:center 40%;"></div>
+    <div class="animal-card" data-cat="goats">
+      <div class="thumb"><img src="images/goat-boer.jpg" alt="Boer goats at Sosian Ranch"></div>
       <div class="badge">🚚 Nationwide Delivery Available</div>
       <h3>Boer Goats</h3>
       <p>Premium Boer goats ideal for meat production and breeding.</p>
@@ -179,7 +187,7 @@
       </div>
     </div>
 
-    <div class="animal-card">
+    <div class="animal-card" data-cat="goats">
       <div class="thumb"><img src="images/goat-kalahari.jpg" alt="Red Kalahari goats at Sosian Ranch"></div>
       <div class="badge">🚚 Nationwide Delivery Available</div>
       <h3>Red Kalahari Goats</h3>
@@ -198,7 +206,7 @@
       </div>
     </div>
 
-    <div class="animal-card">
+    <div class="animal-card" data-cat="goats">
       <div class="thumb"><img src="images/goat-saanen.jpg" alt="Saanen dairy goats at Sosian Ranch"></div>
       <div class="badge">🚚 Nationwide Delivery Available</div>
       <h3>Saanen Dairy Goats</h3>
@@ -217,7 +225,7 @@
       </div>
     </div>
 
-    <div class="animal-card">
+    <div class="animal-card" data-cat="sheep">
       <div class="thumb"><img src="images/sheep-doper.jpg" alt="Doper sheep at Sosian Ranch"></div>
       <div class="badge">🚚 Nationwide Delivery Available</div>
       <h3>Doper Sheep</h3>
@@ -236,8 +244,8 @@
       </div>
     </div>
 
-    <div class="animal-card">
-      <div class="thumb"><img src="images/horse-main.jpg" alt="Horse at Sosian Ranch"></div>
+    <div class="animal-card" data-cat="horses">
+      <div class="thumb fit"><img src="images/horse-main.jpg" alt="Horse at Sosian Ranch"></div>
       <div class="badge">🚚 Nationwide Delivery Available</div>
       <h3>Horses</h3>
       <p>Healthy, well-raised horses suitable for farm and leisure use.</p>
@@ -259,21 +267,25 @@
   <span class="eyebrow">GALLERY</span>
   <h2>Life on the Ranch</h2>
   <div class="gallery-grid">
-    <div class="gallery-thumb"><img src="images/gallery-1.jpg" alt="Cattle on Sosian Ranch pasture"></div>
-    <div class="gallery-thumb"><img src="images/gallery-2.jpg" alt="Sosian Ranch cattle herd"></div>
-    <div class="gallery-thumb"><img src="images/gallery-3.jpg" alt="Cow and calf at Sosian Ranch"></div>
-    <div class="gallery-thumb"><img src="images/gallery-4.jpg" alt="Cattle grazing at Sosian Ranch" style="object-position:center 65%;"></div>
-    <div class="gallery-thumb"><img src="images/gallery-5.jpg" alt="Cow at Sosian Ranch"></div>
-    <div class="gallery-thumb"><img src="images/cattle-girolando.jpg" alt="Cattle at Sosian Ranch"></div>
-    <div class="gallery-thumb"><img src="images/sheep-doper2.jpg" alt="Doper sheep at Sosian Ranch"></div>
-    <div class="gallery-thumb"><img src="images/horse-2.jpg" alt="Horse at Sosian Ranch"></div>
-    <div class="gallery-thumb"><img src="images/horse-3.jpg" alt="Horse at Sosian Ranch"></div>
-    <div class="gallery-thumb"><img src="images/goat-red-1.jpg" alt="Goat at Sosian Ranch"></div>
-    <div class="gallery-thumb"><img src="images/goat-red-2.jpg" alt="Sheep at Sosian Ranch"></div>
-    <div class="gallery-thumb"><img src="images/cattle-group.jpg" alt="Cattle at Sosian Ranch"></div>
-    <div class="gallery-thumb"><img src="images/gallery-6.jpg" alt="Calf at Sosian Ranch"></div>
-    <div class="gallery-thumb"><img src="images/gallery-7.jpg" alt="Cow grazing at Sosian Ranch"></div>
-    <div class="gallery-thumb"><img src="images/gallery-8.jpg" alt="Cow grazing at Sosian Ranch"></div>
+    <div class="gallery-thumb fit"><img src="images/gallery-1.jpg" alt="Cattle on Sosian Ranch pasture"></div>
+    <div class="gallery-thumb fit"><img src="images/gallery-2.jpg" alt="Sosian Ranch cattle herd"></div>
+    <div class="gallery-thumb fit"><img src="images/gallery-3.jpg" alt="Cow and calf at Sosian Ranch"></div>
+    <div class="gallery-thumb fit"><img src="images/gallery-4.jpg" alt="Cattle grazing at Sosian Ranch"></div>
+    <div class="gallery-thumb fit"><img src="images/gallery-5.jpg" alt="Cow at Sosian Ranch"></div>
+    <div class="gallery-thumb fit"><img src="images/cattle-girolando.jpg" alt="Cattle at Sosian Ranch"></div>
+    <div class="gallery-thumb fit"><img src="images/sheep-doper2.jpg" alt="Doper sheep at Sosian Ranch"></div>
+    <div class="gallery-thumb fit"><img src="images/horse-2.jpg" alt="Horse at Sosian Ranch"></div>
+    <div class="gallery-thumb fit"><img src="images/horse-3.jpg" alt="Horse at Sosian Ranch"></div>
+    <div class="gallery-thumb fit"><img src="images/goat-red-1.jpg" alt="Goat at Sosian Ranch"></div>
+    <div class="gallery-thumb fit"><img src="images/goat-red-2.jpg" alt="Sheep at Sosian Ranch"></div>
+    <div class="gallery-thumb fit"><img src="images/cattle-group.jpg" alt="Cattle at Sosian Ranch"></div>
+    <div class="gallery-thumb fit"><img src="images/gallery-6.jpg" alt="Calf at Sosian Ranch"></div>
+    <div class="gallery-thumb fit"><img src="images/gallery-7.jpg" alt="Cow grazing at Sosian Ranch"></div>
+    <div class="gallery-thumb fit"><img src="images/gallery-8.jpg" alt="Cow grazing at Sosian Ranch"></div>
+    <div class="gallery-thumb fit"><img src="images/gallery-9.jpg" alt="Red Kalahari goat at Sosian Ranch"></div>
+    <div class="gallery-thumb fit"><img src="images/gallery-10.jpg" alt="Calves at Sosian Ranch"></div>
+    <div class="gallery-thumb fit"><img src="images/gallery-11.jpg" alt="Calves at Sosian Ranch"></div>
+    <div class="gallery-thumb fit"><img src="images/gallery-12.jpg" alt="Cow and calf at Sosian Ranch"></div>
   </div>
   <p class="sub small">More photos added regularly — send us more farm photos any time to add here.</p>
 </section>
